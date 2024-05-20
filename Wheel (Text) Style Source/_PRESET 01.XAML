@@ -1,0 +1,15 @@
+<Style x:Key="ListBoxStyle" TargetType="ListBox">
+	<Setter Property="BorderBrush" Value="Transparent" />
+	<Setter Property="Background" Value="Transparent" />
+	<Setter Property="Foreground" Value="@@FORECOLOR@@" />
+	<Setter Property="Opacity" Value="@@OPACITY@@" />
+	<Setter Property="FontFamily" Value="@@FONT@@" />
+	<Setter Property="FontWeight" Value="@@FONTWEIGHT@@" />
+	<Setter Property="FontStyle" Value="@@FONTSTYLE@@" />
+	<Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+	<Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden" />
+	<Setter Property="BorderThickness" Value="0" />
+	<Setter Property="Padding" Value="0" />
+	<Setter Property="Margin" Value="0" />
+	<Setter Property="FocusVisualStyle" Value="{x:Null}" />
+</Style>

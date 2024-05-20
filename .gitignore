@@ -1,0 +1,6 @@
+#template for CTC files on Github
+#ignore the following
+#backup files
+*.bak
+#cache folder
+.cache/

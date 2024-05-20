@@ -1,0 +1,70 @@
+<Style x:Key="ListBoxItemStyle" TargetType="ListBoxItem">
+	<Setter Property="FocusVisualStyle" Value="{x:Null}" />
+	<Setter Property="Padding" Value="0" />
+	<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ItemsControl}}}" />
+	<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ItemsControl}}}" />
+	<Setter Property="Background" Value="Transparent" />
+	<Setter Property="BorderBrush" Value="Transparent" />
+	<Setter Property="BorderThickness" Value="0" />
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type ListBoxItem}">
+				<Border x:Name="Bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="15,7,15,9"
+					Padding="0" SnapsToDevicePixels="True">
+					<ContentPresenter HorizontalAlignment="Stretch"
+						VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+						Content="{TemplateBinding Content}"
+						ContentStringFormat="{TemplateBinding ContentStringFormat}"
+						ContentTemplate="{TemplateBinding ContentTemplate}"
+						SnapsToDevicePixels="True" />
+				</Border>
+				<ControlTemplate.Triggers>
+					<MultiTrigger>
+						<MultiTrigger.Conditions>
+							<Condition Property="IsMouseOver" Value="True" />
+						</MultiTrigger.Conditions>
+						<Setter TargetName="Bd" Property="Background" Value="#003b3b3b" />
+						<Setter TargetName="Bd" Property="BorderBrush" Value="#213b3b3b" />
+					</MultiTrigger>
+					<MultiTrigger>
+						<MultiTrigger.Conditions>
+							<Condition Property="Selector.IsSelectionActive" Value="False" />
+							<Condition Property="IsSelected" Value="True" />
+						</MultiTrigger.Conditions>
+						<Setter TargetName="Bd" Property="TextElement.Foreground" Value="#D8D8D8" />
+						<Setter TargetName="Bd" Property="Background" Value="#1F1F1F" />
+						<Setter TargetName="Bd" Property="BorderBrush" Value="#1F1F1F" />
+					</MultiTrigger>
+					<MultiTrigger>
+						<MultiTrigger.Conditions>
+							<Condition Property="Selector.IsSelectionActive" Value="True" />
+							<Condition Property="IsSelected" Value="True" />
+						</MultiTrigger.Conditions>
+						<Setter TargetName="Bd" Property="Background" Value="#FF000000" />
+						<Setter TargetName="Bd" Property="BorderBrush" Value="#FF000000" />
+					</MultiTrigger>
+					<Trigger Property="IsEnabled" Value="False">
+						<Setter TargetName="Bd" Property="TextElement.Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+</Style>
+
+<Style x:Key="ListBoxStyle" TargetType="ListBox">
+	<Setter Property="ItemContainerStyle" Value="{DynamicResource ListBoxItemStyle}" />
+	<Setter Property="BorderBrush" Value="Transparent" />
+	<Setter Property="Background" Value="Transparent" />
+	<Setter Property="Foreground" Value="{Binding Source=@@FORECOLOR@@, Converter={StaticResource TextToBrush}}" />
+	<Setter Property="Opacity" Value="@@OPACITY@@" />
+	<Setter Property="FontFamily" Value="@@FONT@@" />
+	<Setter Property="FontWeight" Value="@@FONTWEIGHT@@" />
+	<Setter Property="FontStyle" Value="@@FONTSTYLE@@" />
+	<Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden" />
+	<Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden" />
+	<Setter Property="BorderThickness" Value="0" />
+	<Setter Property="Padding" Value="0" />
+	<Setter Property="Margin" Value="0" />
+	<Setter Property="FocusVisualStyle" Value="{x:Null}" />
+</Style>

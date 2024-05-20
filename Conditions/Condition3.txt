@@ -1,0 +1,1 @@
+ConditionName<Text/>ConditionType<Color/>ConditionSmartBinding<False/>ConditionData<#FF888888WhenPlatform nameValueIsArcade/>

@@ -1,0 +1,4 @@
+<TextBlock FontSize="{Binding ElementName=Prop_Text3_FontSize, Path=Text}" FontFamily="LAUNCHBOX_ROOT_FOLDER/Themes/Editorial Noir/Fonts/Acre.otf#Acre Medium" TextAlignment="Left" Foreground="#E1303A">
+	<Run Text="{Binding Path=GamesCount}" />
+	<Run Text="AVAILABLE GAMES" />
+</TextBlock>
