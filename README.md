@@ -1,7 +1,7 @@
 ## Epic Noir Together Theme - v1.0
 
-This is a modern dark BigBox v13+ theme, based on original ideas by Chicuelo and many others.
-Edited by Adam Smith
+This is a modern dark BigBox v13+ theme, based on original ideas by Chicuelo and many others. \
+Edited by Adam Smith.
 
 These are project files for the [Community Theme Creator](https://www.patreon.com/COMMUNITYThemeCreator) by y2guru. \
 This version requires CTC v3.2 and above.
